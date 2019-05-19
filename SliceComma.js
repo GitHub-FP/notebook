@@ -28,6 +28,5 @@ function SliceComma(Num){
     else{
         value = value.toString().split('').reverse().join('');
     }
-    debugger
     return value;
 }
