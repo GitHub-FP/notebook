@@ -1,1 +1,0 @@
-Documenting my programming life
