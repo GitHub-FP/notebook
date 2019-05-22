@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dataObject=[ 
+            { "REGION_NAME" : "Search Engines", "Sales_Revenue_Netnet_PTD_10000" : 5, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Content Server", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Content Server", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Search Engines", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Business", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Content Server", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Internet Services", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Search Engines", "Sales_Revenue_Netnet_PTD_10000" : 6, "Sales_sales_UC_PTD" : 1 },
+            { "REGION_NAME" : "Search Engines", "Sales_Revenue_Netnet_PTD_10000" : 1, "Sales_sales_UC_PTD" : 1 } 
+        ];
+        SumJsObject(dataObject);
+        function SumJsObject(dataObject){
+            var result = dataObject.reduce(function(res, obj,index,array) {
+                console.log('res', res);
+                console.log('obj', obj);
+                console.log('index', index);
+                console.log('array', array);
+                debugger
+                if (!(obj.REGION_NAME in res))
+                {
+                    res.__array.push(res[obj.REGION_NAME] = obj);
+                    res._ddd.push(res[obj.REGION_NAME] = obj);
+                }
+                else {
+                    res[obj.REGION_NAME].Sales_Revenue_Netnet_PTD_10000 += obj.Sales_Revenue_Netnet_PTD_10000;
+                    res[obj.REGION_NAME].Sales_sales_UC_PTD += obj.Sales_sales_UC_PTD;
+                    console.log('res[obj.REGION_NAME]',res)
+                }
+                return res;
+            },
+            {
+                __array:[],
+                _ddd:[]
+            }).__array.sort(function(a,b) { 
+                    return b.Sales_sales_UC_PTD - a.Sales_sales_UC_PTD;
+            });
+            console.log('result', result)
+            return result;
+        }
+    </script>
+</body>
+</html>
