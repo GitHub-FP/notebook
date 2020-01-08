@@ -1,0 +1,7 @@
+ private createSVGElement(element, attrs) {
+    var returnEle = document.createElementNS('http://www.w3.org/2000/svg', element);
+    for (const key in attrs) {
+        returnEle.setAttribute(key, attrs[key])
+    }
+    return returnEle
+}
