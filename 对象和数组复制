@@ -1,0 +1,3 @@
+ private cloneObjectFn(obj) {             // 对象复制，因为是引用类型，如果不这样做就会与原来的对象使用同一个
+            return JSON.parse(JSON.stringify(obj))
+        }
