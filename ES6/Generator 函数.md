@@ -1,4 +1,4 @@
-## Demo
+##  Demo
 
 ```
 function* helloWorldGenerator() {
@@ -22,7 +22,7 @@ hw.next()
 // { value: undefined, done: true }
 ```
 
-##解释
+## 解释
 
 由于 Generator 函数返回的遍历器对象，只有调用`next`方法才会遍历下一个内部状态，所以其实提供了一种可以暂停执行的函数。`yield`表达式就是暂停标志。遍历器对象的`next`方法的运行逻辑如下:
 
