@@ -25,7 +25,7 @@ service.interceptors.request.use((config: AxiosRequestConfig) => {
     config.headers.token = localStorage.getItem('token');  //让请求头携带验证token
     config.headers.admin = localStorage.getItem('user'); // 让每个请求携带自定义token 请根据实际情况自行修改
   }
-  
+
   return config
 }, (err: any) => {
   Message({
@@ -45,7 +45,7 @@ service.interceptors.response.use((response: AxiosResponse) => {
       duration: 3 * 1000
     });
     return { code: 100 }
-  } else{
+  } else {
     let res = response.data;
     // let { code, msg, token = null } = res;
     // if (token) {
