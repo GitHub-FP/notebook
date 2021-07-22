@@ -42,7 +42,7 @@
     "vue-types": "^3.0.1",
     "vuex": "^4.0.0-rc.2",
     "vuex-module-decorators": "^1.0.1",
-    "xlsx": "^0.16.9",
+    "xlsx": "^0.17.0",
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
