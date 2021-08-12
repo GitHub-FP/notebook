@@ -4,7 +4,7 @@
 
 #### 3.安装相应的依赖
 
-#### 4.在在当前模块的pom.xml中使用其他模块的package，添加如下类似配置：
+#### 4.在当前模块的pom.xml中使用其他模块的package，添加如下类似配置：
 
 ```
 <dependency>
@@ -15,7 +15,9 @@
 </dependency>
 ```
 
-#### 5.报错找不到main class ，当前模块没有主方法，需要在当前模块的pom.xml中添加如下类似配置：
+#### 5.报错找不到main class ，
+
+#### 1.当前模块没有主方法，需要在当前模块的pom.xml中添加如下类似配置：
 
 ```
     <build>
@@ -37,6 +39,10 @@
         </plugins>
     </build>
 ```
+
+#### 2.添加了模块没有进行再次编译
+
+![1627723897853](C:\Users\fengpan\AppData\Roaming\Typora\typora-user-images\1627723897853.png)
 
 #### 6.多个模块不能在相同的位置同时使用application.properties
 
