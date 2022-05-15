@@ -3,12 +3,16 @@
 #### linux安装
 
 ```
+需要进入docke内部配置runner
+
 docker run -d --name gitlab-runner --restart always -v /srv/gitlab-runner/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest
 ```
 
 #### win安装
 
 ```
+需要进入docke内部配置runner
+
 docker run -d --name gitlab-runner --restart always -v D:\SoftwareInstallation\docker\runner\config:/etc/gitlab-runner -v D:\SoftwareInstallation\docker\runner\docker.sock:/var/run/docker.sock  gitlab/gitlab-runner:latest
 ```
 
@@ -49,16 +53,30 @@ my-tag,another-tag
 
 输入Ruuner的执行者：
 Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
-shell
+docker
+
+输入镜像:
+Enter the default Docker image (for example, ruby:2.7):
+alpine:latest
 
 退出:
 exit
 ```
 
+#### docker 镜像打包时需要在文件 /etc/gitlab-runner/config.toml设置 volumes
+
+```
+volumes = ["/cache","/var/run/docker.sock:/var/run/docker.sock","/usr/local/repos/gradle:/usr/local/repos/gradle"]
+```
+
+![1652625303133](mdimg/docker%20%E5%AE%89%E8%A3%85runner/1652625303133.png)
+
 #### 添加clone_url (同一台电脑运行runner 和 gitlab 不添加找不到项目)
 
- ##### 找到 /etc/gitlab-runner/config.toml  文件
+找到 /etc/gitlab-runner/config.toml  文件
 
-##### 添加一条信息 clone_url = "${局域网地址}"
+添加一条信息 clone_url = "${局域网地址}"
 
 ![1651419273258](mdimg/docker%20%E5%AE%89%E8%A3%85runner/1651419273258.png)
+
+​    volumes = ["/cache"]

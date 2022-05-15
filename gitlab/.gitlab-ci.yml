@@ -1,0 +1,47 @@
+image: node:14.15.3
+
+cache:
+    paths:
+      - node_modules
+      - build
+
+stages: 
+    - install
+    - build
+    - artft
+    - deploy
+
+install: 
+    stage: install
+    timeout: 3h 30m
+    tags: 
+        - dockerrunner
+    script: 
+        - echo "hello"
+        - node -v
+        - npm -v
+        - npm install
+build: 
+    stage: build
+    timeout: 3h 30m
+    tags: 
+        - dockerrunner
+    script: 
+        - npm run wb
+artft:
+    stage: artft
+    script: echo 'The man who has made up his mind to win will never say “impossible”.'
+    tags: 
+        - dockerrunner
+    artifacts:
+        paths: 
+            - build/
+deploy: 
+    image: docker:stable
+    stage: deploy
+    script: 
+        - echo 'deploy'
+        - docker build -t test-runner-docker:v1 .
+    tags: 
+        - dockerrunner
+
