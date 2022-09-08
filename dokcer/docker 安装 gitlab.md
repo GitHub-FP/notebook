@@ -41,9 +41,15 @@ exit
 docker restart gitlab
 ```
 
-
-
 ![img](mdimg/gitlabe/8666493ee82245a4a14982728ce8bb99.png) 
+
+#### 克隆地址是一串字符串，需要在/data/docker/gitlab/etc/gitlab.rb新增一条数据（只写域名，不要加端口）
+
+```
+external_url 'http://192.168.92.130'
+```
+
+![1652628609063](mdimg/docker%20%E5%AE%89%E8%A3%85%20gitlab/1652628609063.png)
 
 ### CI/CD代码模板
 
