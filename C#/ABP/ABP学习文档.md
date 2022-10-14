@@ -24,7 +24,7 @@ public void ConfigureServices(IServiceCollection services)
 
 GUID：数据库的生成方式不一样，初始化配置需要修改，默认mssql
 
-IClock: 使用datetime，使用utc时间，默认是0时区（拒绝DateTimeOffset）
+IClock: 使用datetime，使用utc时间，默认是0时区（拒绝DateTimeOffset），如果转换其他时区可以在前后端添加一个util方法
 
 ### 模型验证
 
@@ -51,6 +51,25 @@ BP与ASP.NET Core模型验证系统系统兼容
 
 ### 依赖注入
 
+<!--注意：ABP的引用其他模块必须适应DependsOn引用此模块-->
+
+### API层
+
+#### 自动API控制器
+
+1. 扫描程序集带有IRemoteService 接口的类和自动添加为控制器
+
+```
+Configure<AbpAspNetCoreMvcOptions>(options =>
+        {
+            options
+                .ConventionalControllers
+                .Create(typeof(BookStoreApplicationModule).Assembly);
+        });
+```
+
+注意：写控制器层必须要添加IRemoteService接口，不然不会变为API控制器
+
 ### 应用层
 
 > 1.继承ApplicationService类，内部帮忙继承了一些类方便使用，特别是继承了IUnitOfWorkEnabled，可以帮助我们实现事务
@@ -63,7 +82,131 @@ BP与ASP.NET Core模型验证系统系统兼容
 - **数据传输对象(DTO)**: [DTO](https://docs.abp.io/zh-Hans/abp/latest/Data-Transfer-Objects)是一个不含业务逻辑的简单对象,用于应用服务层与展现层间的数据传输.
 - **工作单元(UOW)**: [工作单元](https://docs.abp.io/zh-Hans/abp/latest/Unit-Of-Work)是事务的原子操作.UOW内所有操作,当成功时全部提交,失败时全部回滚.
 
+#### 应用程序服务
+
+命名前缀：...Service
+
+#### DTO （对象到对象映射）（AutoMapper）
+
+描述：Dto->Entity , Entity->Dto。
+
+使用Entity作为接口参数，由于自身携带了属性，会导致接口参数复杂，会暴露实体信息及其关联，所以不建议使用Entity作为接口参数。
+
+##### 不要重用输入DTO（不要嫌麻烦，粘贴复制即可），但是重用输出DTO
+
+```csharp
+public interface IUserAppService : IApplicationService
+{
+    Task CreateAsync(UserCreationDto input);
+    Task UpdateAsync(UserUpdateDto input);
+    Task ChangePasswordAsync(UserChangePasswordDto input);
+}
+```
+
+##### 对象映射时，内部存在List<T>的处理方式
+
+```
+CreateMap<User, UserDto>()
+    .ForMember(dest => dest.DptUserRels, opt => opt.MapFrom(src=>
+        src.DptUserRels.Select<DptUserRel, DptUserRelDto>(x=>
+            new DptUserRelDto() {
+                DptId = x.DptId,
+                UserId = x.UserId
+            }
+        )));
+
+CreateMap<UserDto, User>()
+    .ForMember(dest => dest.DptUserRels, opt => opt.MapFrom(src => 
+        src.DptUserRels.Select<DptUserRelDto, DptUserRel>(x => 
+            new DptUserRel()
+            {
+                DptId = x.DptId,
+                UserId = x.UserId
+            }
+        )))
+    .ForMember(dest => dest.Departments, opt => opt.Ignore());
+```
+
+##### ABP自定义AutoMapper
+
+```
+public class UserDtoToUserMapper : IObjectMapper<User, UserDto>, ITransientDependency
+    {
+        public UserDto Map(User source)
+        {
+            return new UserDto()
+            {
+                TenantId = source.TenantId,
+                UserDisplayName = source.UserDisplayName,
+                UserEmail = source.UserEmail,
+                UserMobile = source.UserMobile,
+                UserEnabled = source.UserEnabled,
+                UserSync = source.UserSync,
+                UserBuildinName = source.UserBuildinName,
+                UserBuildinPassword = source.UserBuildinPassword,
+                UserAdName = source.UserAdName,
+                UserAadName = source.UserAadName,
+                UserWeworkName = source.UserWeworkName,
+                UserDingtalkName = source.UserDingtalkName,
+                UserFeishuName = source.UserFeishuName,
+                DptUserRels = source.DptUserRels.Select(x=>new DptUserRelDto() {
+                    DptId = x.DptId,
+                    UserId = x.UserId
+                }).ToList(),
+            };
+        }
+
+        public UserDto Map(User source, UserDto destination)
+        {
+            return destination;
+        }
+    }
+```
+
+注意：
+
+1.不同的Entity之间存在双向导航，查询出来的数据转换为Json会可能出现深层循环，会报错，我们可以使用AutoMapper解决
+
+2.Dto的对象不要来源于实体中，再写一个即可，因为可能出现深层循环问题或者类库引用问题
+
 ### 领域层
+
+#### 加载方式
+
+EF Core ： https://learn.microsoft.com/zh-cn/ef/core/querying/related-data/eager
+
+ABP ： https://docs.abp.io/zh-Hans/abp/latest/Entity-Framework-Core
+
+##### 预先加载
+
+##### 显示加载
+
+##### 延迟加载
+
+``` 
+ABP 要求 :
+
+1.安装 Microsoft.EntityFrameworkCore.Proxies
+2.配置如下 
+Configure<AbpDbContextOptions>(options =>
+{
+    options.PreConfigure<MyCrmDbContext>(opts =>
+    {
+        opts.DbContextOptions.UseLazyLoadingProxies(); //启用延时加载
+    });
+
+    options.UseSqlServer();
+});
+
+3.导航属性和集合必须是virtual
+```
+
+#### 领域服务
+
+命名前缀：...Manager
+
+- 你实现了依赖于某些服务（如存储库或其他外部服务）的核心域逻辑.
+- 你需要实现的逻辑与多个聚合/实体相关,因此它不适合任何聚合.
 
  #### 规约
 
@@ -101,15 +244,60 @@ BP与ASP.NET Core模型验证系统系统兼容
 
  EF core 聚合根加载所有子集合？请参考EFcore加载关联实体(https://docs.abp.io/zh-Hans/abp/latest/Entity-Framework-Core#%E5%8A%A0%E8%BD%BD%E5%85%B3%E8%81%94%E5%AE%9E%E4%BD%93)
 
-
-
 所有**子集合**对象必须被初始化
 
+
+
 #### 实体
+
+##### 描述
 
 Entity<Guid> 和 Entity 的区别：
 
 在仓储中继承Entity<Guid>的 IRepository<TEntity, TKey> 实现了简单的CRUD功能，继承Entity 的仓储无法使用与id相关的功能
+
+##### 贫血模型
+
+##### 充血模型
+
+1.改变模型值的逻辑可以定义为方法。
+
+```
+public class Issue : AggregateRoot<Guid>
+    {
+        public Guid RepositoryId { get; private set; } //Never changes
+        public string Title { get; private set; } //Needs validation
+        public string Text { get; set; } //No validation
+        public Guid? AssignedUserId { get; set; } //No validation
+        public bool IsClosed { get; private set; } //Should change with CloseReason
+        public IssueCloseReason? CloseReason { get; private set; } //Should change with IsClosed
+
+        //...
+
+        public void SetTitle(string title)
+        {
+            Title = Check.NotNullOrWhiteSpace(title, nameof(title));
+        }
+
+        public void Close(IssueCloseReason reason)
+        {
+            IsClosed = true;
+            CloseReason = reason;
+        }
+
+        public void ReOpen()
+        {
+            IsClosed = false;
+            CloseReason = null;
+        }
+    }
+```
+
+
+
+#### 实体逻辑
+
+在实体中创建逻辑方法
 
 #### 仓储
 
@@ -133,8 +321,6 @@ public class PersonRepository : EfCoreRepository<MyDbContext, Person, Guid>, IPe
     }
 }
 ```
-
-
 
 ###  工作单元（UOW，事务）
 
