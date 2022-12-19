@@ -1,8 +1,22 @@
 ## ABP 基础
 
-### 配置文件的使用
+### 配置与选项模式
 
-#### .net core 的方式
+>  ABP也是基于ASP.NET Core，未做特殊处理
+
+#### 配置模式
+
+```
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.ConfigureAppConfiguration((hostingContext, config) =>
+{
+    config.AddJsonFile("MyConfig.json",
+    optional: true,
+    reloadOnChange: true);
+});
+```
+
+#### .net core 的选项模式
 
 ```
 public void ConfigureServices(IServiceCollection services)
@@ -12,13 +26,129 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-#### ABP的方式
-
- ABP也是基于ASP.NET Core，未做特殊处理
-
 ### ABP模块
 
 ### HTTP请求
+
+### 邮件发送
+
+> Volo.Abp.Emailing默认安装在领域层，并且注意删除以下代码(此代码不会在DeBug环境中发送邮件)：context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());
+
+#### 选项模式
+
+1.在appsetting.json文件中配置，password必须要要加密，所以自定义实现ISettingEncryptionService接口为password进行加密解密配置
+
+```c#
+[Dependency(ServiceLifetime.Transient, ReplaceServices = true)]
+public class CustomSettingEncryptionService : ISettingEncryptionService
+{
+    public string Decrypt(SettingDefinition settingDefinition, string encryptedValue)
+    {
+        return encryptedValue;
+    }
+
+    public string Encrypt(SettingDefinition settingDefinition, string plainValue)
+    {
+    	return plainValue;
+    }
+}
+```
+
+2.在在appsetting.json中配置邮件参数
+
+```json
+{
+  ...,
+  "Settings": {
+    "Abp.Mailing.Smtp.Host": "smtp.qq.com",
+    "Abp.Mailing.Smtp.Port": "587",
+    "Abp.Mailing.Smtp.UserName": "1446355013@qq.com",
+    "Abp.Mailing.Smtp.Password": "ynuvcjnaagqkhbaj",
+    "Abp.Mailing.Smtp.EnableSsl": "false",
+    "Abp.Mailing.Smtp.UseDefaultCredentials": "false",
+    "Abp.Mailing.DefaultFromAddress": "1446355013@qq.com",
+    "Abp.Mailing.DefaultFromDisplayName": "ABP application"
+  }
+}
+```
+
+#### 设置模式
+
+1.自定义继承SettingDefinitionProvider，通过sql或者自定义设置参数
+
+```C#
+public class EmailSettingProvider : SettingDefinitionProvider
+{
+    public override void Define(ISettingDefinitionContext context)
+    {
+        var smtpHost = context.GetOrNull("Abp.Mailing.Smtp.Host");
+        context.Add(
+            new SettingDefinition("Abp.Mailing.DefaultFromAddress", "1446355013@qq.com"),
+            new SettingDefinition("Abp.Mailing.Smtp.Host", "smtp.qq.com"),
+            new SettingDefinition("Abp.Mailing.Smtp.Port", "587"),
+            new SettingDefinition("Abp.Mailing.Smtp.UserName", "1446355013@qq.com"),
+            new SettingDefinition("Abp.Mailing.Smtp.Password", "ynuvcjnaagqkhbaj"),
+            new SettingDefinition("Abp.Mailing.Smtp.EnableSsl", "false"),
+            new SettingDefinition("Abp.Mailing.Smtp.UseDefaultCredentials", "false")    
+        );
+    }
+}
+```
+
+####  集成MailKit
+
+1.将Volo.Abp.Emailing替换为Volo.Abp.MailKit
+
+2.替换[DependsOn(typeof(AbpEmailingModule))] 为 [DependsOn(typeof(AbpMailKitModule))]
+
+
+
+#### 自定义MailKit
+
+继承MailKitSmtpEmailSender
+
+```
+[Dependency(ServiceLifetime.Transient, ReplaceServices = true)]
+    public class CustomMailKitSmtpEmailSender: MailKitSmtpEmailSender
+    {
+        protected AbpMailKitOptions AbpMailKitOptions { get; set; }
+
+        protected ISmtpEmailSenderConfiguration SmtpConfiguration { get; set; }
+
+        public CustomMailKitSmtpEmailSender(ISmtpEmailSenderConfiguration smtpConfiguration, IBackgroundJobManager backgroundJobManager, IOptions<AbpMailKitOptions> abpMailKitConfiguration)
+          : base(smtpConfiguration, backgroundJobManager, abpMailKitConfiguration)
+        {
+            AbpMailKitOptions = abpMailKitConfiguration.Value;
+            SmtpConfiguration = smtpConfiguration;
+        }
+
+		// protected 子类可以访问
+        protected override async Task ConfigureClient(SmtpClient client)
+        {
+            await client.ConnectAsync(
+                await SmtpConfiguration.GetHostAsync(),
+                await SmtpConfiguration.GetPortAsync(),
+                await GetSecureSocketOption()
+            );
+
+            if (await SmtpConfiguration.GetUseDefaultCredentialsAsync())
+            {
+                return;
+            }
+
+            await client.AuthenticateAsync(
+                await SmtpConfiguration.GetUserNameAsync(),
+                await SmtpConfiguration.GetPasswordAsync()
+            );
+        }
+    }
+```
+
+### 数据过滤
+
+> 在EFcore的继承上实现的全局过滤，建议使用ABP自带的接口
+
+多个数据过滤
 
 ### GUID 和 时钟(IClock)
 
@@ -51,9 +181,12 @@ BP与ASP.NET Core模型验证系统系统兼容
 
 ### 依赖注入
 
-<!--注意：ABP的引用其他模块必须适应DependsOn引用此模块-->
+> 注意：ABP的引用其他模块必须适应DependsOn引用此模块
+>
 
-### API层
+### API层(控制器层)
+
+> 注意：写控制器层必须要添加IRemoteService接口，不然不会变为API控制器
 
 #### 自动API控制器
 
@@ -67,8 +200,6 @@ Configure<AbpAspNetCoreMvcOptions>(options =>
                 .Create(typeof(BookStoreApplicationModule).Assembly);
         });
 ```
-
-注意：写控制器层必须要添加IRemoteService接口，不然不会变为API控制器
 
 ### 应用层
 

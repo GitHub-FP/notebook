@@ -43,6 +43,8 @@ public class RemoveForeignKeysHelper
 ### 3.继承MigrationsModelDiffer类型删除出指定的外键
 
 ```
+### EF core 6.0
+
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "EF1001:Internal EF Core API usage.", Justification = "<挂起>")]
     public class MigrationsModelDifferWithoutForeignKey : MigrationsModelDiffer
     {
@@ -68,6 +70,49 @@ public class RemoveForeignKeysHelper
                 RemoveForeignKeysHelper.ExecuForeignKeys(operation);
             }
            //operation.ForeignKeys?.Clear();
+
+            return operations;
+        }
+    }
+    
+    
+  ### EF core 7.0
+  
+  [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "EF1001:Internal EF Core API usage.", Justification = "<挂起>")]
+    public class MigrationsModelDifferWithoutForeignKey : MigrationsModelDiffer
+    {
+        //public MigrationsModelDifferWithoutForeignKey
+        //    ([NotNull] IRelationalTypeMappingSource typeMappingSource,
+        //    [NotNull] IMigrationsAnnotationProvider migrationsAnnotations,
+        //    [NotNull] IChangeDetector changeDetector,
+        //    [NotNull] IUpdateAdapterFactory updateAdapterFactory,
+        //    [NotNull] CommandBatchPreparerDependencies commandBatchPreparerDependencies)
+        //    : base(typeMappingSource, migrationsAnnotations, changeDetector, updateAdapterFactory, commandBatchPreparerDependencies)
+        //{
+        //}
+
+        public MigrationsModelDifferWithoutForeignKey
+            ([NotNull] IRelationalTypeMappingSource typeMappingSource,
+            [NotNull] IMigrationsAnnotationProvider migrationsAnnotationProvider,
+            [NotNull] IRowIdentityMapFactory rowIdentityMapFactory,
+            [NotNull] CommandBatchPreparerDependencies commandBatchPreparerDependencies)
+            : base(typeMappingSource, migrationsAnnotationProvider, rowIdentityMapFactory, commandBatchPreparerDependencies)
+        {
+        }
+
+        public override IReadOnlyList<MigrationOperation> GetDifferences(IRelationalModel? source, IRelationalModel? target)
+        {
+            var operations = base.GetDifferences(source, target)
+                .Where(op => !(op is AddForeignKeyOperation))
+                .Where(op => !(op is DropForeignKeyOperation))
+                .ToList();
+
+            foreach (var operation in operations.OfType<CreateTableOperation>())
+            {
+                //ExecuForeignKeys
+                RemoveForeignKeysHelper.ExecuForeignKeys(operation);
+            }
+            //operation.ForeignKeys?.Clear();
 
             return operations;
         }
