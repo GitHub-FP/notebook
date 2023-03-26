@@ -1,0 +1,14 @@
+2023-03-18 19:44:26.5324|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.Utils.Authentication.Authentication4Aad.GetActiveDirectoryClient(AzureAadConfig azureAadConfig) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Authentication4Aad.cs:line 220
+   at BIPortalService.Utils.Authentication.Authentication4Aad.GetUsers(String filter, Boolean userAll) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Authentication4Aad.cs:line 121
+   at BIPortalService.Controllers.UserAuthController.GetUserPrincipals(String filter) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\UserAuthController.cs:line 338
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 

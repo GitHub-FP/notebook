@@ -29,6 +29,10 @@ RETURN n1, n2,n3,m1,m2,m3,m4
 
 ```
 MATCH (m3:profession {name:'大数据'})-[*1..34]->(result) return result
+
+MATCH p= (m3:profession {name:'大数据'})<-[*]->() return p
+
+match (n) detach delete n
 ```
 
 ### Latest

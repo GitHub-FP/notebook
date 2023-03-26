@@ -1,0 +1,24 @@
+2023-03-09 17:50:38.9177|ApiException|INFO|System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'KpiId'.
+Invalid column name 'KpiId'.
+Invalid column name 'KpiId'.
+Invalid column name 'KpiId'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location where exception was thrown ---
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in C:\projects\dapper\Dapper\SqlMapper.Async.cs:line 956
+   at BIPortalService.DAL.RiskSystem.KpiMessageDal.GetKpiMessageList(String KpiId, String KpiStatusId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\DAL\RiskSystem\KpiMessageDal.cs:line 96
+   at BIPortalService.BLL.RiskSystem.KpiMessageBll.GetKpiMessageList(String KpiId, String KpiStatusId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\RiskSystem\KpiMessageBll.cs:line 15
+   at BIPortalService.Controllers.RiskSystem.KpiMessageController.GetKpiMessageList(String kpiId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\RiskSystem\KpiMessageController.cs:line 21
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+ClientConnectionId:2df9a5ed-6fdf-4750-b509-977358632617
+Error Number:207,State:1,Class:16 

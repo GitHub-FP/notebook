@@ -1,0 +1,92 @@
+2023/03/23 14:09:30 [notice] 15552#8560: signal process started
+2023/03/26 19:50:40 [notice] 268#31892: signal process started
+2023/03/26 19:51:29 [notice] 8500#30676: signal process started
+2023/03/26 19:51:39 [error] 37756#30536: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:52:09 [notice] 37596#36248: signal process started
+2023/03/26 19:52:09 [error] 37596#36248: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 19:53:01 [error] 37756#30536: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:53:07 [error] 37756#30536: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:53:12 [error] 37756#30536: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:53:13 [error] 37756#30536: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:53:23 [notice] 37624#13756: signal process started
+2023/03/26 19:53:23 [error] 37624#13756: invalid PID number "" in "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid"
+2023/03/26 19:54:13 [error] 31196#7908: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:54:25 [notice] 27804#31980: signal process started
+2023/03/26 19:55:13 [notice] 10156#1680: signal process started
+2023/03/26 19:55:13 [error] 10156#1680: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 19:55:29 [error] 7324#15156: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:55:30 [error] 7324#15156: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 19:57:00 [notice] 9740#25868: signal process started
+2023/03/26 19:57:07 [error] 15828#260: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://10.0.0.49:2372/", host: "localhost:2389"
+2023/03/26 19:57:11 [error] 15828#260: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://10.0.0.49:2372/", host: "localhost:2389"
+2023/03/26 19:58:02 [error] 25280#12672: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://10.0.0.49:2372/", host: "localhost:2389"
+2023/03/26 19:59:57 [notice] 20932#13292: signal process started
+2023/03/26 20:00:07 [notice] 19484#5368: signal process started
+2023/03/26 20:00:07 [error] 19484#5368: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:00:18 [error] 28368#9404: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://10.0.0.49:2372/", host: "localhost:2389"
+2023/03/26 20:00:53 [error] 28368#9404: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://10.0.0.49:2372/", host: "localhost:2389"
+2023/03/26 20:01:22 [notice] 21480#30004: signal process started
+2023/03/26 20:02:37 [notice] 26040#5368: signal process started
+2023/03/26 20:04:11 [notice] 38492#10692: signal process started
+2023/03/26 20:05:43 [notice] 7040#38168: signal process started
+2023/03/26 20:05:43 [error] 7040#38168: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:05:52 [error] 14176#17060: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /wcr/tableau.html HTTP/1.1", upstream: "https://40.73.168.96:80/wcr/tableau.html", host: "localhost:2389"
+2023/03/26 20:05:54 [error] 14176#17060: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /wcr/tableau.html HTTP/1.1", upstream: "https://40.73.168.96:80/wcr/tableau.html", host: "localhost:2389"
+2023/03/26 20:06:14 [notice] 21072#9368: signal process started
+2023/03/26 20:06:21 [error] 28728#13884: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /wcr/tableau.html HTTP/1.1", upstream: "https://40.73.168.96:80/wcr/tableau.html", host: "localhost:2389"
+2023/03/26 20:06:57 [notice] 36432#20804: signal process started
+2023/03/26 20:06:57 [error] 36432#20804: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:07:53 [notice] 32652#36168: signal process started
+2023/03/26 20:07:53 [error] 32652#36168: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:07:55 [notice] 17024#15668: signal process started
+2023/03/26 20:07:55 [error] 17024#15668: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:08:14 [error] 28728#13884: *5 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://40.73.168.96:80/", host: "localhost:2389"
+2023/03/26 20:13:32 [emerg] 11448#32212: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/server.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/server.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:13:39 [emerg] 20268#8068: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/server.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/server.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:14:02 [emerg] 12396#37300: bind() to 0.0.0.0:443 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2023/03/26 20:19:38 [notice] 4208#26044: signal process started
+2023/03/26 20:23:45 [notice] 26816#16336: signal process started
+2023/03/26 20:24:02 [emerg] 4596#7324: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:24:31 [emerg] 7424#10948: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:24:34 [emerg] 37404#18168: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:24:45 [emerg] 29128#36956: cannot load certificate "C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('C:\Users\fengpan\Desktop\nginx-1.22.0/conf/hifengpan.crt','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2023/03/26 20:26:16 [notice] 38844#31516: signal process started
+2023/03/26 20:27:47 [notice] 33984#26780: signal process started
+2023/03/26 20:28:41 [notice] 21308#14112: signal process started
+2023/03/26 20:29:20 [error] 32880#24564: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://43.154.112.186:80/", host: "localhost"
+2023/03/26 20:29:20 [error] 32880#24564: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "https://43.154.112.186:80/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2023/03/26 20:29:22 [error] 32880#24564: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET / HTTP/1.1", upstream: "https://43.154.112.186:80/", host: "localhost"
+2023/03/26 20:29:22 [error] 32880#24564: *1 SSL_do_handshake() failed (SSL: error:1408F10B:SSL routines:ssl3_get_record:wrong version number) while SSL handshaking to upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /favicon.ico HTTP/1.1", upstream: "https://43.154.112.186:80/favicon.ico", host: "localhost", referrer: "http://localhost/"
+2023/03/26 20:29:36 [notice] 20036#22644: signal process started
+2023/03/26 20:30:23 [notice] 36984#23352: signal process started
+2023/03/26 20:30:23 [error] 36984#23352: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:30:27 [notice] 3116#18276: signal process started
+2023/03/26 20:30:27 [error] 3116#18276: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:32:11 [notice] 22724#24500: signal process started
+2023/03/26 20:32:44 [notice] 6724#33816: signal process started
+2023/03/26 20:32:44 [error] 6724#33816: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:35:21 [notice] 21844#30460: signal process started
+2023/03/26 20:37:57 [notice] 22816#25804: signal process started
+2023/03/26 20:37:58 [notice] 25224#7292: signal process started
+2023/03/26 20:37:58 [error] 25224#7292: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:42:00 [notice] 36388#27784: signal process started
+2023/03/26 20:42:02 [notice] 13120#18584: signal process started
+2023/03/26 20:42:51 [emerg] 10120#17492: "proxy_pass" directive is duplicate in C:\Users\fengpan\Desktop\nginx-1.22.0/conf/nginx.conf:143
+2023/03/26 20:43:53 [notice] 17896#11192: signal process started
+2023/03/26 20:43:53 [error] 17896#11192: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:43:56 [notice] 17528#23392: signal process started
+2023/03/26 20:43:56 [error] 17528#23392: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 20:45:14 [notice] 13248#17104: signal process started
+2023/03/26 20:45:40 [notice] 18828#38844: signal process started
+2023/03/26 22:47:29 [notice] 19716#28800: signal process started
+2023/03/26 22:49:23 [notice] 18016#24728: signal process started
+2023/03/26 22:50:30 [notice] 23664#2396: signal process started
+2023/03/26 22:51:45 [notice] 16524#1656: signal process started
+2023/03/26 22:52:08 [notice] 29840#11252: signal process started
+2023/03/26 22:52:08 [error] 29840#11252: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 22:52:29 [emerg] 18420#28492: no "ssl_certificate" is defined for the "listen ... ssl" directive in C:\Users\fengpan\Desktop\nginx-1.22.0/conf/nginx.conf:132
+2023/03/26 22:52:42 [emerg] 14532#9744: no "ssl_certificate" is defined for the "listen ... ssl" directive in C:\Users\fengpan\Desktop\nginx-1.22.0/conf/nginx.conf:132
+2023/03/26 22:52:57 [emerg] 12576#17880: no "ssl_certificate" is defined for the "listen ... ssl" directive in C:\Users\fengpan\Desktop\nginx-1.22.0/conf/nginx.conf:132
+2023/03/26 22:53:15 [notice] 11420#37324: signal process started
+2023/03/26 22:53:15 [error] 11420#37324: CreateFile() "C:\Users\fengpan\Desktop\nginx-1.22.0/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2023/03/26 22:54:18 [notice] 7132#9432: signal process started

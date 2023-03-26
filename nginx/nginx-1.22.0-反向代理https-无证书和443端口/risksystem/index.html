@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta
+      name="keywords"
+      content="antd,umi,umijs,ant design,脚手架,布局, Ant Design,项目,Pro,admin,控制台,主页,开箱即用,中后台,解决方案,组件库"
+    />
+    <meta
+      name="description"
+      content="
+    An out-of-box UI solution for enterprise applications as a React boilerplate."
+    />
+    <meta
+      name="description"
+      content="
+      开箱即用的中台前端/设计解决方案。"
+    /> -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>China Data Lake</title>
+    <!-- <link rel="icon" href="/favicon.png" type="image/x-icon" /> -->
+    <!-- <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet"> -->
+    <script
+      type="text/javascript"
+      src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"
+    ></script>
+    <link rel="stylesheet" href="/umi.6ee5c621.css" />
+    <script>
+      window.routerBase = "/page";
+    </script>
+    <script>
+      //! umi version: 3.2.22
+    </script>
+    <script>
+      window.umi_plugin_ant_themeVar = [
+        {
+          theme: "dark",
+          key: "reddark",
+          fileName: "reddark.css",
+          modifyVars: {
+            "@body-background": "#222222",
+            "@popover-background": "#2d313c",
+            "@border-color-split": "#41454f",
+            "@component-background": "rgba(37, 40, 50, 0.7)",
+            "@table-header-bg": "#313541",
+            "@table-row-hover-bg": "fade(@primary-color, 10%)",
+            "@border-color-base": "fade(@white, 50%)",
+            "@ptl-report-toolbar-bg": "#414553",
+            "@select-item-selected-bg": "fade(@primary-color, 30%)",
+            "@primary-color": "#d65151",
+            "@layout-body-background":
+              "url('/service/theme/bg/cttdark.png') 0% 0% / cover fixed",
+            "@layout-header-background": "#252832",
+            "@layout-header-color": "#cccccc",
+            "@layout-sider-background": "#313541",
+            "@ptl-sidermenu-submenu-bg": "#252832",
+            "@ptl-header-menu-submenu-item-hover-bg": "rgba(215, 82, 82, 0.75)",
+            "@ptl-tabpage-nav-bg": "#555760",
+            "@ptl-tabpage-nav-active-bg": "#2b2e38",
+            "@ptl-sidermenu-selected-bg": "rgba(214, 81, 81, 0.2)",
+            "@ptl-subnav-bg": "rgba(49, 53, 65, 0.92)",
+          },
+        },
+        {
+          theme: "dark",
+          key: "cttred",
+          fileName: "cttred.css",
+          modifyVars: {
+            "@body-background": "#222222",
+            "@popover-background": "#2c2d2f",
+            "@border-color-split": "#41454f",
+            "@component-background": "rgba(53, 44, 45, 0.8)",
+            "@table-header-bg": "#1c1213",
+            "@table-row-hover-bg": "fade(@primary-color, 10%)",
+            "@border-color-base": "fade(@white, 50%)",
+            "@ptl-report-toolbar-bg": "#594648",
+            "@select-item-selected-bg": "fade(@primary-color, 30%)",
+            "@primary-color": "#d75252",
+            "@layout-body-background":
+              "url('/service/theme/bg/cttred.png') 0% 0% / cover fixed",
+            "@layout-header-background": "rgba(37, 40, 50, 0.6)",
+            "@layout-header-color": "#cccccc",
+            "@layout-sider-background": "rgba(37, 40, 50, 0.43)",
+            "@ptl-sidermenu-submenu-bg": "rgba(38, 11, 14, 0.63)",
+            "@ptl-header-menu-submenu-item-hover-bg": "rgba(215, 82, 82, 0.75)",
+            "@ptl-tabpage-nav-bg": "rgba(58, 33, 37, 0.9)",
+            "@ptl-tabpage-nav-active-bg": "#2d1b1a",
+            "@ptl-sidermenu-selected-bg": "rgba(214, 81, 81, 0.2)",
+            "@ptl-subnav-bg": "rgb(39, 30, 33, 0.88)",
+          },
+        },
+        {
+          key: "rosered",
+          fileName: "rosered.css",
+          modifyVars: {
+            "@primary-color": "#C32D39",
+            "@layout-header-background": "rgb(220, 114, 124)",
+            "@layout-header-color": "#ffffff",
+            "@layout-sider-background": "#f3f2f1",
+            "@ptl-sidermenu-submenu-bg": "#e1dfdd",
+            "@ptl-sidermenu-color": "#323130",
+            "@ptl-sidermenu-active-color": "#ae8689",
+            "@ptl-sidermenu-selected-bg": "#e5b9bc",
+            "@ptl-subnav-bg": "rgba(243, 242, 241, 0.95)",
+            "@ptl-subnav-color": "#323130",
+            "@ptl-subnav-active-bg": "#e5b9bc",
+            "@ptl-tabpage-nav-bg": "#e1dfdd",
+            "@ptl-tabpage-nav-color": "#323130",
+            "@ptl-tabpage-nav-active-bg": "#e5b9bc",
+          },
+        },
+        {
+          key: "blue",
+          fileName: "blue.css",
+          modifyVars: {
+            "@primary-color": "#ff7332",
+            "@layout-header-background": "#2d324b",
+            "@layout-header-color": "#969696",
+            "@layout-sider-background": "#1e2337",
+            "@ptl-sidermenu-submenu-bg": "#141923",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#2e333d",
+            "@ptl-subnav-bg": "rgba(45, 45, 70, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#424259",
+            "@ptl-tabpage-nav-bg": "#505569",
+            "@ptl-tabpage-nav-color": "#dbdbdb",
+            "@ptl-tabpage-nav-active-bg": "#2c2f38",
+            "@ptl-tabpage-nav-boder-bottom-color": "#dbdbdb",
+          },
+        },
+        {
+          key: "abodark",
+          fileName: "abodark.css",
+          modifyVars: {
+            "@layout-body-background": "#f0f0f0",
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#2d2d2d",
+            "@layout-header-color": "#bababa",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#0f0f0f",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#6b6b6b",
+            "@ptl-tabpage-nav-color": "#f9f9f9",
+            "@ptl-tabpage-nav-active-bg": "#f9f9f9",
+          },
+        },
+        {
+          key: "cesRed",
+          fileName: "cesRed.css",
+          modifyVars: {
+            "@primary-color": "#ff872a",
+            "@layout-body-background": "#f0f0f0",
+            "@layout-header-background": "rgb(216, 43, 29)",
+            "@layout-header-color": "#fafafa",
+            "@layout-sider-background": "rgb(216, 43, 29)",
+            "@ptl-sidermenu-submenu-bg": "rgb(245, 245, 245)",
+            "@ptl-sidermenu-color": "#eeeeee",
+            "ptl-sidermenu-submenu-open-color": "#aaaaaa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "rgb(50, 50, 50)",
+            "@ptl-sidermenu-submenu-color": "rgb(47, 47, 47)",
+            "@ptl-sidermenu-submenu-active-color": "#aaaaaa",
+            "@ptl-subnav-bg": "rgba(245, 245, 245, 0.95)",
+            "@ptl-subnav-color": "#9a9a9a",
+            "@ptl-subnav-active-bg": "rgb(50, 50, 50)",
+            "@ptl-tabpage-nav-bg": "#ffffff",
+            "@ptl-tabpage-nav-color": "#5c5c5c",
+            "@ptl-tabpage-nav-active-bg": "#f0f0f0",
+          },
+        },
+        {
+          key: "dbuRed",
+          fileName: "dbuRed.css",
+          modifyVars: {
+            "@primary-color": "#fe7e11",
+            "@layout-body-background": "#f0f0f0",
+            "@layout-header-background": "#da291c",
+            "@layout-header-color": "#fafafa",
+            "@layout-sider-background": "#da291c",
+            "@ptl-sidermenu-submenu-bg": "#333333",
+            "@ptl-sidermenu-color": "#eeeeee",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "rgba(200, 200, 200, 0.6)",
+            "@ptl-subnav-bg": "#d7534f",
+            "@ptl-subnav-color": "#ffffff",
+            "@ptl-subnav-active-bg": "rgba(80, 80, 80, 0.5)",
+            "@ptl-tabpage-nav-bg": "#ffffff",
+            "@ptl-tabpage-nav-color": "#5c5c5c",
+            "@ptl-tabpage-nav-active-bg": "#f0f0f0",
+            "@ptl-sidermenu-item-border-top": "2px solid #ffffff",
+            "@ptl-sidermenu-sub-item-border-top": "2px solid #ffffff",
+            "@ptl-sidermenu-item-margin": "0",
+            "@ptl-sidermenu-font-size": "16px",
+          },
+        },
+        {
+          key: "dbudark",
+          fileName: "dbudark.css",
+          modifyVars: {
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#1b1b1b",
+            "@layout-header-color": "#969696",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#0f0f0f",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#5a5c66",
+            "@ptl-tabpage-nav-color": "#dbdbdb",
+            "@ptl-tabpage-nav-active-bg": "#2c2f38",
+            "@ptl-tabpage-nav-boder-bottom-color": "#dbdbdb",
+          },
+        },
+        {
+          key: "ebuDark",
+          fileName: "ebuDark.css",
+          modifyVars: {
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#2d2d2d",
+            "@layout-header-color": "#969696",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#0f0f0f",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#5a5c66",
+            "@ptl-tabpage-nav-color": "#dbdbdb",
+            "@ptl-tabpage-nav-active-bg": "#2c2f38",
+            "@ptl-tabpage-nav-boder-bottom-color": "#dbdbdb",
+            "@ptl-sidermenu-item-margin": "0",
+            "@ptl-sidermenu-item-border-bottom": "1px dashed #ffffff",
+          },
+        },
+        {
+          key: "gcic",
+          fileName: "gcic.css",
+          modifyVars: {
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#2d2d2d",
+            "@layout-header-color": "#969696",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#0f0f0f",
+            "@ptl-sidermenu-color": "#c5c5c5",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#c5c5c5",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#5a5c66",
+            "@ptl-tabpage-nav-color": "#dbdbdb",
+            "@ptl-tabpage-nav-active-bg": "#2c2f38",
+            "@ptl-tabpage-nav-boder-bottom-color": "#dbdbdb",
+            "@ptl-sidermenu-item-border-bottom": "1px dashed #707070",
+            "@ptl-sidermenu-item-margin": "0",
+            "@ptl-sidermenu-font-weight": "600",
+          },
+        },
+        {
+          theme: "dark",
+          key: "whry",
+          fileName: "whry.css",
+          modifyVars: {
+            "@body-background": "#333333",
+            "@popover-background": "#382c2c",
+            "@border-color-split": "#41454f",
+            "@component-background": "rgba(29, 22, 22, 0.7)",
+            "@table-header-bg": "#2f2323",
+            "@table-row-hover-bg": "fade(@primary-color, 10%)",
+            "@border-color-base": "fade(@white, 50%)",
+            "@ptl-report-toolbar-bg": "#000000",
+            "@ptl-report-toolbar-border-bottom": "0",
+            "@ptl-header-border-bottom": "2px solid #ee2e24",
+            "@select-item-selected-bg": "fade(@primary-color, 30%)",
+            "@primary-color": "#ee2e24",
+            "@layout-body-background":
+              "url('/service/theme/cefsw/bg.png') 0% 0% / cover fixed",
+            "@layout-header-background":
+              "url('/service/theme/cefsw/top.png') 100% / cover",
+            "@layout-header-color": "#cccccc",
+            "@layout-sider-background":
+              "url('/service/theme/cefsw/left.png') 0% 100% / cover",
+            "@ptl-sidermenu-submenu-bg": "rgba(255, 255, 255, 0.3)",
+            "@ptl-sidermenu-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#cccccc",
+            "@ptl-sidermenu-selected-color": "#ee2e24",
+            "@ptl-sidermenu-selected-before-color": "transparent",
+            "@ptl-sidermenu-selected-after-color": "#ee2e24",
+          },
+        },
+        {
+          key: "dces",
+          fileName: "dces.css",
+          modifyVars: {
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#2d2d2d",
+            "@layout-header-color": "#969696",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#0f0f0f",
+            "@ptl-sidermenu-color": "#c5c5c5",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#c5c5c5",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#5a5c66",
+            "@ptl-tabpage-nav-color": "#dbdbdb",
+            "@ptl-tabpage-nav-active-bg": "#2c2f38",
+            "@ptl-tabpage-nav-boder-bottom-color": "#dbdbdb",
+            "@ptl-sidermenu-item-border-bottom": "1px dashed #707070",
+            "@ptl-sidermenu-item-margin": "0",
+            "@ptl-sidermenu-font-weight": "600",
+          },
+        },
+        {
+          key: "xcecdark",
+          fileName: "xcecdark.css",
+          modifyVars: {
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#2d2d2d",
+            "@layout-header-color": "#bababa",
+            "@layout-sider-background": "#1b1b1b",
+            "@ptl-sidermenu-submenu-bg": "#252525",
+            "@layout-body-background":
+              "url('/service/theme/xcecdark/bg.png') 0% 0% / cover fixed",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-item-border-bottom": "1px solid #8e8e8e",
+            "@ptl-sidermenu-selected-color": "#ee2e24",
+            "@ptl-sidermenu-selected-bg": "#bcbcbc",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#6b6b6b",
+            "@ptl-tabpage-nav-color": "#f9f9f9",
+            "@ptl-tabpage-nav-active-bg": "#f9f9f9",
+          },
+        },
+        {
+          theme: "dark",
+          key: "xcecred",
+          fileName: "xcecred.css",
+          modifyVars: {
+            "@body-background": "#333333",
+            "@popover-background": "#382c2c",
+            "@border-color-split": "#41454f",
+            "@component-background": "rgba(29, 22, 22, 0.7)",
+            "@table-header-bg": "#2f2323",
+            "@table-row-hover-bg": "fade(@primary-color, 10%)",
+            "@border-color-base": "fade(@white, 50%)",
+            "@ptl-report-toolbar-bg": "#000000",
+            "@ptl-report-toolbar-border-bottom": "0",
+            "@ptl-header-border-bottom": "2px solid #ee2e24",
+            "@select-item-selected-bg": "fade(@primary-color, 30%)",
+            "@primary-color": "#ee2e24",
+            "@layout-body-background":
+              "url('/service/theme/xcecred/bg.png') 0% 0% / cover fixed",
+            "@layout-header-background": "#000000",
+            "@layout-header-color": "#cccccc",
+            "@layout-sider-background":
+              "url('/service/theme/xcecred/siderbg.png') 0% 100% / cover",
+            "@ptl-sidermenu-submenu-bg": "rgba(52, 52, 52, 0.49)",
+            "@ptl-sidermenu-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#bcbcbc",
+            "@ptl-sidermenu-selected-color": "#ee2e24",
+            "@ptl-sidermenu-item-border-bottom": "1px solid #8e8e8e",
+            "@ptl-sidermenu-sub-item-border-bottom": "1px solid #8e8e8e",
+            "@ptl-sidermenu-item-margin": "0",
+          },
+        },
+        {
+          key: "qualitydark",
+          fileName: "qualitydark.css",
+          modifyVars: {
+            "@layout-body-background": "#f0f0f0",
+            "@primary-color": "#ee2e24",
+            "@layout-header-background": "#232323",
+            "@layout-header-color": "#bababa",
+            "@layout-sider-background":
+              "url('/service/theme/quality/left.png') 0% 100% / cover",
+            "@ptl-sidermenu-submenu-bg": "#000000",
+            "@ptl-sidermenu-color": "#bababa",
+            "@ptl-sidermenu-active-color": "#ffffff",
+            "@ptl-sidermenu-selected-bg": "#333539",
+            "@ptl-subnav-bg": "rgba(54, 54, 55, 0.95)",
+            "@ptl-subnav-color": "#bababa",
+            "@ptl-subnav-active-bg": "#505050",
+            "@ptl-tabpage-nav-bg": "#6b6b6b",
+            "@ptl-tabpage-nav-color": "#f9f9f9",
+            "@ptl-tabpage-nav-active-bg": "#f9f9f9",
+          },
+        },
+      ];
+    </script>
+  </head>
+
+  <body>
+    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
+    <div id="root">
+      <style>
+        html,
+        body,
+        #root {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        #root {
+          background-image: url("/home_bg.png");
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+        }
+
+        .page-loading-warp {
+          padding: 98px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .ant-spin {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+          font-variant: tabular-nums;
+          line-height: 1.5;
+          list-style: none;
+          -webkit-font-feature-settings: "tnum";
+          font-feature-settings: "tnum";
+          position: absolute;
+          display: none;
+          color: #1890ff;
+          text-align: center;
+          vertical-align: middle;
+          opacity: 0;
+          -webkit-transition: -webkit-transform 0.3s
+            cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: -webkit-transform 0.3s
+            cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+            -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+        }
+
+        .ant-spin-spinning {
+          position: static;
+          display: inline-block;
+          opacity: 1;
+        }
+
+        .ant-spin-dot {
+          position: relative;
+          display: inline-block;
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+
+        .ant-spin-dot-item {
+          position: absolute;
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: #1890ff;
+          border-radius: 100%;
+          -webkit-transform: scale(0.75);
+          -ms-transform: scale(0.75);
+          transform: scale(0.75);
+          -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          opacity: 0.3;
+          -webkit-animation: antSpinMove 1s infinite linear alternate;
+          animation: antSpinMove 1s infinite linear alternate;
+        }
+
+        .ant-spin-dot-item:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+
+        .ant-spin-dot-item:nth-child(2) {
+          top: 0;
+          right: 0;
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+
+        .ant-spin-dot-item:nth-child(3) {
+          right: 0;
+          bottom: 0;
+          -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
+
+        .ant-spin-dot-item:nth-child(4) {
+          bottom: 0;
+          left: 0;
+          -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+        }
+
+        .ant-spin-dot-spin {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          -webkit-animation: antRotate 1.2s infinite linear;
+          animation: antRotate 1.2s infinite linear;
+        }
+
+        .ant-spin-lg .ant-spin-dot {
+          font-size: 32px;
+          width: 32px;
+          height: 32px;
+        }
+
+        .ant-spin-lg .ant-spin-dot i {
+          width: 14px;
+          height: 14px;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          .ant-spin-blur {
+            background: #fff;
+            opacity: 0.5;
+          }
+        }
+
+        @-webkit-keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+
+        @keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+      </style>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          min-height: 420px;
+          height: 100%;
+        "
+      >
+        <div class="page-loading-warp">
+          <div class="ant-spin ant-spin-lg ant-spin-spinning">
+            <span class="ant-spin-dot ant-spin-dot-spin"
+              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
+              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/umi.91101a22.js"></script>
+  </body>
+</html>

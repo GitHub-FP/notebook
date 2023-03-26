@@ -1,0 +1,345 @@
+2023-03-16 13:51:29.7183|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:29.7183|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:29.8188|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:29.8188|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:31.2167|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:31.2360|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:31.2392|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:31.7247|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3275|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3275|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3360|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3360|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3360|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3360|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.3503|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 13:51:51.4071|ApiException|INFO|Microsoft.IdentityModel.Tokens.SecurityTokenInvalidSignatureException: IDX10503: Signature validation failed. Keys tried: 'System.Text.StringBuilder'.
+Exceptions caught:
+ 'System.Text.StringBuilder'.
+token: 'System.IdentityModel.Tokens.Jwt.JwtSecurityToken'.
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateSignature(String token, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.DecodeToken(String code) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 136
+   at BIPortalService.Utils.Authentication.Credentials4Jwt.GetCredentialsInfo() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Credentials4Jwt.cs:line 27
+   at BIPortalService.Filters.CustomActionFilter.IsAuthorized(ActionExecutingContext actionContext) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 85
+   at BIPortalService.Filters.CustomActionFilter.OnActionExecuting(ActionExecutingContext context) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Filters\CustomActionFilter.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Filters.ActionFilterAttribute.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 15:52:25.0417|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.BLL.AzurePbiBll.GetPowerBIClient() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 95
+   at BIPortalService.BLL.AzurePbiBll.GetGroups() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 110
+   at BIPortalService.Controllers.AzurePbiController.GetGroups(String azureAuthId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\AzurePbiController.cs:line 37
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 15:52:40.6134|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.BLL.AzurePbiBll.GetPowerBIClient() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 95
+   at BIPortalService.BLL.AzurePbiBll.GetGroups() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 110
+   at BIPortalService.Controllers.AzurePbiController.GetGroups(String azureAuthId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\AzurePbiController.cs:line 37
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 15:52:49.6792|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.BLL.AzurePbiBll.GetPowerBIClient() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 95
+   at BIPortalService.BLL.AzurePbiBll.GetGroups() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 110
+   at BIPortalService.Controllers.AzurePbiController.GetGroups(String azureAuthId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\AzurePbiController.cs:line 37
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 15:52:56.1973|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.BLL.AzurePbiBll.GetPowerBIClient() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 95
+   at BIPortalService.BLL.AzurePbiBll.GetGroups() in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\BLL\AzurePbiBll.cs:line 110
+   at BIPortalService.Controllers.AzurePbiController.GetGroups(String azureAuthId) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\AzurePbiController.cs:line 37
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2023-03-16 16:00:05.8520|ApiException|INFO|System.NullReferenceException: Object reference not set to an instance of an object.
+   at BIPortalService.Utils.Authentication.Authentication4Aad.GetActiveDirectoryClient(AzureAadConfig azureAadConfig) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Authentication4Aad.cs:line 220
+   at BIPortalService.Utils.Authentication.Authentication4Aad.GetUsers(String filter, Boolean userAll) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Utils\Authentication\Authentication4Aad.cs:line 121
+   at BIPortalService.Controllers.UserAuthController.GetUserPrincipals(String filter) in D:\work\svn\预警系统\cummins-datalake-service\BIPortalService\Controllers\UserAuthController.cs:line 338
+   at lambda_method(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
