@@ -98,7 +98,7 @@
     "tasksfile": "^5.1.1",
     "ts-node": "^9.1.0",
     "typescript": "^4.1.2",
-    "vite": "^1.0.0-rc.13",
+    "vite": "^2.9.13",
     "vite-plugin-html": "^1.0.0-beta.2",
     "vite-plugin-mock": "^1.0.9",
     "vite-plugin-purge-icons": "^0.4.5",
