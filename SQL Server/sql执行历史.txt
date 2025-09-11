@@ -1,0 +1,16 @@
+1. 使用系统动态管理视图(DMV)
+sql
+-- 查询最近执行的SQL语句（缓存中的）
+SELECT 
+    t.text AS '执行的SQL语句',
+    s.execution_count AS '执行次数',
+    s.last_execution_time AS '最后执行时间',
+    s.total_worker_time/1000 AS '总CPU时间(ms)',
+    s.total_logical_reads AS '逻辑读取次数',
+    s.total_elapsed_time/1000 AS '总耗时(ms)'
+FROM 
+    sys.dm_exec_query_stats s
+CROSS APPLY 
+    sys.dm_exec_sql_text(s.sql_handle) t
+ORDER BY 
+    s.last_execution_time DESC;
